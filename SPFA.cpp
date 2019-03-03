@@ -69,7 +69,7 @@ bool spfa(int s, int n) //s为源节点号，n为点数
         v = edge1.v;
         w = edge1.w;
         inq[u] = 0;
-        if (visit[u] > n)
+        if (visit[u]++ > n)	//important
         {
             return true;
         }
